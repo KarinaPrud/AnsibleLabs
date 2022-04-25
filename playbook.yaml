@@ -2,6 +2,5 @@
   hosts: localhost
   connection: local
 
-- name: printing variable
-  debug:
-  var: Hello SGT
+- debug: 
+  msg: "Hello World"
