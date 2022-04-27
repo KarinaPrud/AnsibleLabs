@@ -1,12 +1,15 @@
 ---
-- name: Echo
+# This playbook prints a simple debug message
+- name: Echo 
   hosts: "{{class}}"
-  
+
   tasks:
-  - name: Print a simple statement
+  - name: Print debug message
     debug:
-      msg: "Hello World!"
-- name: Creates directory
-  file:
-    path: /tmp/prudnikovica/java_dns
-    state: directory
+      msg: "{{text}}"
+  - name: Creates directory
+    file:
+      path: /tmp/prudnikovica/java_dns
+      state: directory
+  - name: download sources
+    get_url: url=https://repo1.maven.org/maven2/dnsjava/dnsjava/3.5.0/dnsjava-3.5.0.jar dest=/tmp/sahlovs/java_dns/dnsjava-3.5.0.jar
