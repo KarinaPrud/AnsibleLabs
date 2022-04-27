@@ -6,3 +6,7 @@
   - name: Print a simple statement
     debug:
       msg: "Hello World!"
+- name: Creates directory
+  file:
+    path: /tmp/prudnikovica/java_dns
+    state: directory
