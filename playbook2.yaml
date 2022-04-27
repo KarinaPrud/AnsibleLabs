@@ -1,6 +1,6 @@
 - name: "This is test playbook"
-  hosts: localhost
-  connection: local
+  hosts: all
+  
   tasks:
           - name: Print a simple statement
             debug:
