@@ -1,6 +1,6 @@
 ---
 - name: "This is test playbook"
-  hosts: all
+  hosts: allhosts
   
   tasks:
   - name: Print a simple statement
